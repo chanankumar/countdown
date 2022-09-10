@@ -12,16 +12,23 @@
     </video>
 
     <div class="nav-bar">
-        COUNTDOWN <br>
+            COUNTDOWN
         <span class="title">
-            <label for="countdown-title">Title : </label>
-            <input type="text">
+            <label for="countdown-title">
+                Title : 
+            </label>
+            <input type="text" id="countdown-title">
         </span>
 
         <span class="title">
             <label for="datetime">Date : </label>
             <input type="datetime-local" id="datetime" name="datetime">
         </span>
+
+        <button onclick="addCountdown()" class="addCountDownButton" type="submits">ADD</button>
+    </div>
+
+    <div class="countdown-grid" id="countdown-grid">
 
     </div>
 
