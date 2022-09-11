@@ -75,7 +75,35 @@ input:focus {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    color:white;
+    align-items: center;
+    justify-content: center;
+    
 }
 .countdown {
     height: 100px;
+}
+.countdown-grid > * {
+    padding: 10px;
+    position: relative;
+    font-size: 1.2rem;
+    margin: 20px;
+    /* height: 80%; */
+    min-height: 160px;
+    background-color: rgba(78, 76, 76, 0.399);
+}
+.title-countdown-component {
+    text-align: center;
+    font-size: 1.8rem;
+}
+.Remove-Counter {
+    position: absolute;
+    margin-left:-50px;
+    left:50%;
+    width:100px;
+    bottom:0px;
+    background : transparent;
+    border: 2px solid;
+    border-color: #a39c49;
+    color : white;
 }
