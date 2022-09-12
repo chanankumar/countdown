@@ -17,7 +17,14 @@ function addCountdown() {
     updateValues(countdownArray.length-1)
 
 }
+function deleteAllInterval () {
+    const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
 
+// Clear any timeout/interval up to that id
+    for (let i = 1; i < interval_id; i++) {
+    window.clearInterval(i);
+    }
+}
 function addCountdownToPage(countdown,count) {
         if(countdown.countdownDate > 0) {
             addComponentToDOM(countdown,count);
@@ -84,6 +91,7 @@ function deleteCounter(counter) {
     this.localStorage.setItem("details", JSON.stringify(countdownArray));
     const container = document.querySelector('#countdown-grid');
     removeAllChildNodes(container);
+    deleteAllInterval();
     addCountdownToPageOnLoad();
 }
 function updateValues (value) {
